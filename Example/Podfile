@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'GKLivePhotoManager_Example' do
+  pod 'GKLivePhotoManager', :path => '../'
+
+  target 'GKLivePhotoManager_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
