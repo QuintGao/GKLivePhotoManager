@@ -2,11 +2,15 @@
 //  GKViewController.m
 //  GKLivePhotoManager
 //
-//  Created by 1094887059@qq.com on 06/27/2024.
-//  Copyright (c) 2024 1094887059@qq.com. All rights reserved.
+//  Created by QuintGao on 06/27/2024.
+//  Copyright (c) 2024 QuintGao. All rights reserved.
 //
 
 #import "GKViewController.h"
+#import "GKLocalViewController.h"
+#import "GKWebViewController.h"
+#import "GKAlbumViewController.h"
+#import "GKSaveViewController.h"
 
 @interface GKViewController ()
 
@@ -14,16 +18,24 @@
 
 @implementation GKViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)localAction:(id)sender {
+    [self.navigationController pushViewController:GKLocalViewController.new animated:YES];
 }
+
+- (IBAction)webAction:(id)sender {
+    [self.navigationController pushViewController:GKWebViewController.new animated:YES];
+}
+- (IBAction)albumAction:(id)sender {
+    [self.navigationController pushViewController:GKAlbumViewController.new animated:YES];
+}
+
+- (IBAction)saveAction:(id)sender {
+    [self.navigationController pushViewController:GKSaveViewController.new animated:YES];
+}
+
 
 @end

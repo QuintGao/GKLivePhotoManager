@@ -1,0 +1,53 @@
+PODS:
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
+  - GKLivePhotoManager (1.0.0)
+  - GKMessageTool (1.0.5):
+    - MBProgressHUD
+  - MBProgressHUD (1.2.0)
+  - TZImagePickerController (3.8.4):
+    - TZImagePickerController/Basic (= 3.8.4)
+    - TZImagePickerController/Location (= 3.8.4)
+  - TZImagePickerController/Basic (3.8.4)
+  - TZImagePickerController/Location (3.8.4)
+
+DEPENDENCIES:
+  - AFNetworking
+  - GKLivePhotoManager (from `../`)
+  - GKMessageTool
+  - TZImagePickerController
+
+SPEC REPOS:
+  trunk:
+    - AFNetworking
+    - GKMessageTool
+    - MBProgressHUD
+    - TZImagePickerController
+
+EXTERNAL SOURCES:
+  GKLivePhotoManager:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
+  GKLivePhotoManager: 804d4db958be4f3e4f138ebedb83ed47384e8f0b
+  GKMessageTool: fcf46cca30f62eaebb8fea288c9452f3682645f2
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  TZImagePickerController: f1c9f1cae6ac0e30b31aaa9698f9bf4a7cf5b84f
+
+PODFILE CHECKSUM: 995ca671c3056cb4d93ea12fce164ab54617420d
+
+COCOAPODS: 1.15.2

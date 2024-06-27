@@ -2,8 +2,8 @@
 //  GKAppDelegate.m
 //  GKLivePhotoManager
 //
-//  Created by 1094887059@qq.com on 06/27/2024.
-//  Copyright (c) 2024 1094887059@qq.com. All rights reserved.
+//  Created by QuintGao on 06/27/2024.
+//  Copyright (c) 2024 QuintGao. All rights reserved.
 //
 
 #import "GKAppDelegate.h"
