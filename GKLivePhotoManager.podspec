@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.authors      = { "QuintGao" => "1094887059@qq.com" }
   s.social_media_url   = "https://github.com/QuintGao"
-  s.ios.deployment_target = "9.0"
+  s.ios.deployment_target = "10.0"
   s.source       = { :git => "https://github.com/QuintGao/GKLivePhotoManager.git", :tag => s.version.to_s }
   s.source_files = 'GKLivePhotoManager/**/*'
 end
