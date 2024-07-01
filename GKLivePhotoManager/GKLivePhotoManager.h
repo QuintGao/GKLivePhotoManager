@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface GKLivePhotoManager : NSObject
 
-+ (instancetype)manager;
++ (instancetype)manager NS_SWIFT_NAME(default());
 + (void)deallocManager;
 
 /// 处理视频并生成livePhoto需要的文件

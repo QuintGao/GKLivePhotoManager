@@ -430,6 +430,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = JWMR39G949;
+				EXCLUDED_ARCHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GKLivePhotoManager/GKLivePhotoManager-Prefix.pch";
 				INFOPLIST_FILE = "GKLivePhotoManager/GKLivePhotoManager-Info.plist";
@@ -448,6 +449,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = JWMR39G949;
+				EXCLUDED_ARCHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GKLivePhotoManager/GKLivePhotoManager-Prefix.pch";
 				INFOPLIST_FILE = "GKLivePhotoManager/GKLivePhotoManager-Info.plist";

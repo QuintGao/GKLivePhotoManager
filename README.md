@@ -26,6 +26,7 @@ QuintGao, 1094887059@qq.com
 
 ## Version
 
+* 1.0.1 2024.07.01 Swift方法名
 * 1.0.0 2024.06.28 工具类开发
 
 ## License
