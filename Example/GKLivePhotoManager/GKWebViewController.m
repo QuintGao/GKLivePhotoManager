@@ -64,7 +64,10 @@
 - (void)reqeustLivePhoto {
     __weak __typeof(self) weakSelf = self;
     [GKMessageTool showMessage:@"处理livePhoto"];
-    [[GKLivePhotoManager manager] handleDataWithVideoPath:self.videoPath imagePath:self.imagePath completion:^(NSString * _Nullable outVideoPath, NSString * _Nullable outImagePath, NSError * _Nullable error) {
+    
+    [[GKLivePhotoManager manager] handleDataWithVideoPath:self.videoPath imagePath:self.imagePath progressBlock:^(float progress) {
+        NSLog(@"%f", progress);
+    } completion:^(NSString * _Nullable outVideoPath, NSString * _Nullable outImagePath, NSError * _Nullable error) {
         if (error) {
             [GKMessageTool showError:error.localizedDescription];
         }else {

@@ -20,11 +20,11 @@
     
     self.navigationItem.title = @"本地资源";
     
-    NSString *originPath = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"mp4"];
+    NSString *originPath = [[NSBundle mainBundle] pathForResource:@"xzz" ofType:@"mp4"];
     
     __weak __typeof(self) weakSelf = self;
     [GKMessageTool showMessage:nil];
-    [[GKLivePhotoManager manager] handleDataWithVideoPath:originPath completion:^(NSString * _Nullable outVideoPath, NSString * _Nullable outImagePath, NSError * _Nullable error) {
+    [[GKLivePhotoManager manager] handleDataWithVideoPath:originPath progressBlock:nil completion:^(NSString * _Nullable outVideoPath, NSString * _Nullable outImagePath, NSError * _Nullable error) {
         if (error) {
             [GKMessageTool showError:error.localizedDescription];
         }else {

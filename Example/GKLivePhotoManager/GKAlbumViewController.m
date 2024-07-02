@@ -50,7 +50,9 @@
     
     __weak __typeof(self) weakSelf = self;
     [GKMessageTool showMessage:nil];
-    [[GKLivePhotoManager manager] createLivePhotoWithAsset:asset targetSize:CGSizeMake(300, 300) completion:^(PHLivePhoto * _Nullable livePhoto, NSError * _Nullable error) {
+    [[GKLivePhotoManager manager] createLivePhotoWithAsset:asset targetSize:CGSizeMake(300, 300) progressBlock:^(float progress) {
+        NSLog(@"%f", progress);
+    } completion:^(PHLivePhoto * _Nullable livePhoto, NSError * _Nullable error) {
         [GKMessageTool hideMessage];
         if (error) {
             [GKMessageTool showError:error.localizedDescription];

@@ -80,7 +80,9 @@
 }
 
 - (void)saveLivePhotoWithUrl:(NSString *)url {
-    [[GKLivePhotoManager manager] handleDataWithVideoPath:url completion:^(NSString * _Nullable outVideoPath, NSString * _Nullable outImagePath, NSError * _Nullable error) {
+    [[GKLivePhotoManager manager] handleDataWithVideoPath:url progressBlock:^(float progress) {
+        NSLog(@"%f", progress);
+    } completion:^(NSString * _Nullable outVideoPath, NSString * _Nullable outImagePath, NSError * _Nullable error) {
         if (error) {
             [GKMessageTool showError:error.localizedDescription];
         }else {
