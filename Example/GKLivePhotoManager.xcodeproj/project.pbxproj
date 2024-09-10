@@ -23,6 +23,13 @@
 		7909B1842C2D4FB900028F32 /* GKAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7909B1802C2D4FB900028F32 /* GKAlbumViewController.m */; };
 		7909B1872C2D4FC800028F32 /* GKSaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7909B1852C2D4FC800028F32 /* GKSaveViewController.m */; };
 		7909B18B2C2D59C700028F32 /* test.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7909B18A2C2D59C700028F32 /* test.mp4 */; };
+		79B8F19B2C37BD6100B16C5A /* AVAssetExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B8F1942C37BD6100B16C5A /* AVAssetExtension.swift */; };
+		79B8F19C2C37BD6100B16C5A /* Converter4Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B8F1952C37BD6100B16C5A /* Converter4Image.swift */; };
+		79B8F19D2C37BD6100B16C5A /* Converter4Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B8F1962C37BD6100B16C5A /* Converter4Video.swift */; };
+		79B8F19E2C37BD6100B16C5A /* LivePhotoUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B8F1982C37BD6100B16C5A /* LivePhotoUtil.m */; };
+		79B8F19F2C37BD6100B16C5A /* metadata.mov in Resources */ = {isa = PBXBuildFile; fileRef = 79B8F1992C37BD6100B16C5A /* metadata.mov */; };
+		79B8F1A52C37E5DA00B16C5A /* GKVideoConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B8F1A42C37E5DA00B16C5A /* GKVideoConverter.m */; };
+		79B8F1A82C37E5E300B16C5A /* GKImageConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B8F1A72C37E5E300B16C5A /* GKImageConverter.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +61,17 @@
 		7909B1852C2D4FC800028F32 /* GKSaveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKSaveViewController.m; sourceTree = "<group>"; };
 		7909B1862C2D4FC800028F32 /* GKSaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKSaveViewController.h; sourceTree = "<group>"; };
 		7909B18A2C2D59C700028F32 /* test.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.mp4; sourceTree = "<group>"; };
+		79B8F1912C37BD4F00B16C5A /* Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Example-Bridging-Header.h"; sourceTree = "<group>"; };
+		79B8F1942C37BD6100B16C5A /* AVAssetExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVAssetExtension.swift; sourceTree = "<group>"; };
+		79B8F1952C37BD6100B16C5A /* Converter4Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Converter4Image.swift; sourceTree = "<group>"; };
+		79B8F1962C37BD6100B16C5A /* Converter4Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Converter4Video.swift; sourceTree = "<group>"; };
+		79B8F1972C37BD6100B16C5A /* LivePhotoUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LivePhotoUtil.h; sourceTree = "<group>"; };
+		79B8F1982C37BD6100B16C5A /* LivePhotoUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LivePhotoUtil.m; sourceTree = "<group>"; };
+		79B8F1992C37BD6100B16C5A /* metadata.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = metadata.mov; sourceTree = "<group>"; };
+		79B8F1A32C37E5DA00B16C5A /* GKVideoConverter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GKVideoConverter.h; sourceTree = "<group>"; };
+		79B8F1A42C37E5DA00B16C5A /* GKVideoConverter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GKVideoConverter.m; sourceTree = "<group>"; };
+		79B8F1A62C37E5E300B16C5A /* GKImageConverter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GKImageConverter.h; sourceTree = "<group>"; };
+		79B8F1A72C37E5E300B16C5A /* GKImageConverter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GKImageConverter.m; sourceTree = "<group>"; };
 		79CAE76075AA10DB187C90AE /* GKLivePhotoManager.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = GKLivePhotoManager.podspec; path = ../GKLivePhotoManager.podspec; sourceTree = "<group>"; };
 		859C7D2D99364F21406BEBF0 /* Pods-GKLivePhotoManager_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GKLivePhotoManager_Example.debug.xcconfig"; path = "Target Support Files/Pods-GKLivePhotoManager_Example/Pods-GKLivePhotoManager_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		865ED5549E9381350553BBCF /* Pods-GKLivePhotoManager_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GKLivePhotoManager_Tests.debug.xcconfig"; path = "Target Support Files/Pods-GKLivePhotoManager_Tests/Pods-GKLivePhotoManager_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -155,6 +173,8 @@
 				7909B1892C2D4FFB00028F32 /* ViewController */,
 				6003F59C195388D20070C39A /* GKAppDelegate.h */,
 				6003F59D195388D20070C39A /* GKAppDelegate.m */,
+				79B8F1912C37BD4F00B16C5A /* Example-Bridging-Header.h */,
+				79B8F19A2C37BD6100B16C5A /* Util */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -176,6 +196,24 @@
 				7909B1852C2D4FC800028F32 /* GKSaveViewController.m */,
 			);
 			name = ViewController;
+			sourceTree = "<group>";
+		};
+		79B8F19A2C37BD6100B16C5A /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				79B8F1942C37BD6100B16C5A /* AVAssetExtension.swift */,
+				79B8F1952C37BD6100B16C5A /* Converter4Image.swift */,
+				79B8F1962C37BD6100B16C5A /* Converter4Video.swift */,
+				79B8F1972C37BD6100B16C5A /* LivePhotoUtil.h */,
+				79B8F1982C37BD6100B16C5A /* LivePhotoUtil.m */,
+				79B8F1A32C37E5DA00B16C5A /* GKVideoConverter.h */,
+				79B8F1A42C37E5DA00B16C5A /* GKVideoConverter.m */,
+				79B8F1A62C37E5E300B16C5A /* GKImageConverter.h */,
+				79B8F1A72C37E5E300B16C5A /* GKImageConverter.m */,
+				79B8F1992C37BD6100B16C5A /* metadata.mov */,
+			);
+			name = Util;
+			path = "../../../../Downloads/Video2LivePhoto-main/Video2LivePhoto/Util";
 			sourceTree = "<group>";
 		};
 		9CF3B388F88EE53564B5D1AD /* Pods */ = {
@@ -225,6 +263,7 @@
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
 						DevelopmentTeam = JWMR39G949;
+						LastSwiftMigration = 1540;
 					};
 				};
 			};
@@ -255,6 +294,7 @@
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
+				79B8F19F2C37BD6100B16C5A /* metadata.mov in Resources */,
 				7909B18B2C2D59C700028F32 /* test.mp4 in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
@@ -320,9 +360,15 @@
 			files = (
 				7909B1832C2D4FB900028F32 /* GKLocalViewController.m in Sources */,
 				7909B1872C2D4FC800028F32 /* GKSaveViewController.m in Sources */,
+				79B8F19E2C37BD6100B16C5A /* LivePhotoUtil.m in Sources */,
 				6003F59E195388D20070C39A /* GKAppDelegate.m in Sources */,
+				79B8F1A82C37E5E300B16C5A /* GKImageConverter.m in Sources */,
+				79B8F19D2C37BD6100B16C5A /* Converter4Video.swift in Sources */,
 				7909B1842C2D4FB900028F32 /* GKAlbumViewController.m in Sources */,
 				6003F5A7195388D20070C39A /* GKViewController.m in Sources */,
+				79B8F1A52C37E5DA00B16C5A /* GKVideoConverter.m in Sources */,
+				79B8F19C2C37BD6100B16C5A /* Converter4Image.swift in Sources */,
+				79B8F19B2C37BD6100B16C5A /* AVAssetExtension.swift in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				7909B1822C2D4FB900028F32 /* GKBaseViewController.m in Sources */,
 				7909B1812C2D4FB900028F32 /* GKWebViewController.m in Sources */,
@@ -429,16 +475,19 @@
 			baseConfigurationReference = FE04A910D21A7DBFD8129B51 /* Pods-Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = JWMR39G949;
 				EXCLUDED_ARCHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GKLivePhotoManager/GKLivePhotoManager-Prefix.pch";
 				INFOPLIST_FILE = "GKLivePhotoManager/GKLivePhotoManager-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = cn.test.GKLivePhotoManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_OBJC_BRIDGING_HEADER = "GKLivePhotoManager/Example-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -448,16 +497,18 @@
 			baseConfigurationReference = 1A1053F4D502876AC76366AE /* Pods-Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = JWMR39G949;
 				EXCLUDED_ARCHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GKLivePhotoManager/GKLivePhotoManager-Prefix.pch";
 				INFOPLIST_FILE = "GKLivePhotoManager/GKLivePhotoManager-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = cn.test.GKLivePhotoManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_OBJC_BRIDGING_HEADER = "GKLivePhotoManager/Example-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

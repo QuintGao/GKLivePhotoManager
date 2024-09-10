@@ -11,6 +11,7 @@
 #import "GKWebViewController.h"
 #import "GKAlbumViewController.h"
 #import "GKSaveViewController.h"
+#import <UniformTypeIdentifiers/UniformTypeIdentifiers.h>
 
 @interface GKViewController ()
 
@@ -20,6 +21,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSLog(@"%@", UTTypeHEIC);
 }
 
 - (IBAction)localAction:(id)sender {

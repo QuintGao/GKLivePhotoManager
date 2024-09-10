@@ -10,6 +10,7 @@
 #import <AFNetworking/AFNetworking.h>
 #import "GKLivePhotoManager.h"
 #import <GKMessageTool/GKMessageTool.h>
+#import "LivePhotoUtil.h"
 
 @interface GKSaveViewController ()
 
@@ -80,22 +81,29 @@
 }
 
 - (void)saveLivePhotoWithUrl:(NSString *)url {
-    [[GKLivePhotoManager manager] handleDataWithVideoPath:url progressBlock:^(float progress) {
-        NSLog(@"%f", progress);
-    } completion:^(NSString * _Nullable outVideoPath, NSString * _Nullable outImagePath, NSError * _Nullable error) {
-        if (error) {
-            [GKMessageTool showError:error.localizedDescription];
-        }else {
-            [[GKLivePhotoManager manager] saveLivePhotoWithVideoPath:outVideoPath imagePath:outImagePath completion:^(BOOL success, NSError *error) {
-                [GKMessageTool hideMessage];
-                if (error) {
-                    [GKMessageTool showError:error.localizedDescription];
-                }else {
-                    [GKMessageTool showText:@"保存成功！！！"];
-                }
-            }];
+//    [[GKLivePhotoManager manager] handleDataWithVideoPath:url progressBlock:^(float progress) {
+//        NSLog(@"%f", progress);
+//    } completion:^(NSString * _Nullable outVideoPath, NSString * _Nullable outImagePath, NSError * _Nullable error) {
+//        if (error) {
+//            [GKMessageTool showError:error.localizedDescription];
+//        }else {
+//            [[GKLivePhotoManager manager] saveLivePhotoWithVideoPath:outVideoPath imagePath:outImagePath completion:^(BOOL success, NSError *error) {
+//                [GKMessageTool hideMessage];
+//                if (error) {
+//                    [GKMessageTool showError:error.localizedDescription];
+//                }else {
+//                    [GKMessageTool showText:@"保存成功！！！"];
+//                }
+//            }];
+//        }
+//    }];
+    
+    [LivePhotoUtil convertVideo:url complete:^(BOOL success, NSString *msg) {
+        if (success) {
+            NSLog(@"保存成功！！！！");
         }
     }];
+    
 }
 
 @end
