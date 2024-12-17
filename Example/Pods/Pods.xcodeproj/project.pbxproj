@@ -28,7 +28,7 @@
 		244132343E56AF8C9CE3B56C7EEC4B9F /* Bool+ZLPhotoBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209AC32FA0DAD2073F2CE6C7565CD08A /* Bool+ZLPhotoBrowser.swift */; };
 		2532FCC0FA12508DDEC703269711052A /* ZLPhotoPreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D5741B6B7C6D3B9C256BE30FFFB1BC /* ZLPhotoPreviewController.swift */; };
 		266DAB0FDE609097F47C8213242238F8 /* ZLAlbumListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C851EB144B3204991EF6373557B4F97 /* ZLAlbumListController.swift */; };
-		28B0632A044A5D3D4A936B15535788DF /* ZLPhotoBrowser-ZLPhotoBrowser_Privacy in Resources */ = {isa = PBXBuildFile; fileRef = 2D2A9EB70C6642F12F68C802DBB83654 /* ZLPhotoBrowser-ZLPhotoBrowser_Privacy */; };
+		28B0632A044A5D3D4A936B15535788DF /* ZLPhotoBrowser_Privacy.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2D2A9EB70C6642F12F68C802DBB83654 /* ZLPhotoBrowser_Privacy.bundle */; };
 		2D025ECB8990F278D088B476D1F42BF9 /* ZLCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C011B1FF4B268985A26133EE6A5C10A /* ZLCollectionViewFlowLayout.swift */; };
 		2D330CE78CA5DEFCC2E7649B90D214A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E945DC58D21532262CA35185DE7E7795 /* Foundation.framework */; };
 		2F471E49F553E731FC357F271A19C0FA /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 46C825DF506B70B51510D97948847A58 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -120,7 +120,7 @@
 		CB348F114CCDFD6C8A607E03271D9406 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE047B9DCE91CB032A8A5C381A6B047B /* UIKit.framework */; };
 		CF81E1B51116CC81B9A112DE0F08E477 /* ZLPhotoBrowser.h in Headers */ = {isa = PBXBuildFile; fileRef = 297DE7B79FE41F20A1111F77254CA92C /* ZLPhotoBrowser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0982C39E07DBE08184EA37C06FBD855 /* ZLPhotoConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F163925767E9596BFDBDC627DD083B75 /* ZLPhotoConfiguration.swift */; };
-		D2DD6A83E1BCE0BD5EA5CFE036988627 /* GKLivePhotoManager-GKLivePhotoManager.Privacy in Resources */ = {isa = PBXBuildFile; fileRef = 78FBC98F5A7C90D4105196A8C676A521 /* GKLivePhotoManager-GKLivePhotoManager.Privacy */; };
+		D2DD6A83E1BCE0BD5EA5CFE036988627 /* GKLivePhotoManager.Privacy.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 78FBC98F5A7C90D4105196A8C676A521 /* GKLivePhotoManager.Privacy.bundle */; };
 		D5C046C46961BE465293625D6B870620 /* AFNetworking-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D80ECC6C57D214E9B75BF94B8A4AE4B4 /* AFNetworking-dummy.m */; };
 		DB085936A734E3DCA95E4B7CD79B48AE /* ZLEmbedAlbumListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3CD16A1D502BCB2BFD696FE1F05116 /* ZLEmbedAlbumListView.swift */; };
 		DBD9152526A180771BF7D7CD209B957E /* AFSecurityPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 49416A7FEDB9C0E8B37F1047AB703567 /* AFSecurityPolicy.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -233,8 +233,8 @@
 		1946B9499F14E791DF857F929A411A39 /* ZLEnlargeButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZLEnlargeButton.swift; path = Sources/General/ZLEnlargeButton.swift; sourceTree = "<group>"; };
 		1D5D7AFBDDC1A3B4DB5DACE7F8C0A4ED /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		1E09374702FAA54C10326F3A9D7997FB /* UIColor+ZLPhotoBrowser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+ZLPhotoBrowser.swift"; path = "Sources/Extensions/UIColor+ZLPhotoBrowser.swift"; sourceTree = "<group>"; };
-		1F667CC0E19EAF34E5A4119E2121F585 /* Pods-Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Example"; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2073CF864469BCC16DDAB6E0E5C3DFE4 /* GKLivePhotoManager */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GKLivePhotoManager; path = GKLivePhotoManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F667CC0E19EAF34E5A4119E2121F585 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2073CF864469BCC16DDAB6E0E5C3DFE4 /* GKLivePhotoManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GKLivePhotoManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		209AC32FA0DAD2073F2CE6C7565CD08A /* Bool+ZLPhotoBrowser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bool+ZLPhotoBrowser.swift"; path = "Sources/Extensions/Bool+ZLPhotoBrowser.swift"; sourceTree = "<group>"; };
 		22EE84E1301990DA31A9E4E040F96BE8 /* ZLPhotoConfiguration+Chaining.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ZLPhotoConfiguration+Chaining.swift"; path = "Sources/General/ZLPhotoConfiguration+Chaining.swift"; sourceTree = "<group>"; };
 		243410B9535472556EA4BB6DBC133A0D /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -245,12 +245,12 @@
 		284BF8469FA9DD420B986ECCA377F5E0 /* ZLGeneralDefine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZLGeneralDefine.swift; path = Sources/General/ZLGeneralDefine.swift; sourceTree = "<group>"; };
 		297DE7B79FE41F20A1111F77254CA92C /* ZLPhotoBrowser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZLPhotoBrowser.h; path = Sources/ZLPhotoBrowser.h; sourceTree = "<group>"; };
 		2C011B1FF4B268985A26133EE6A5C10A /* ZLCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZLCollectionViewFlowLayout.swift; path = Sources/General/ZLCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
-		2D2A9EB70C6642F12F68C802DBB83654 /* ZLPhotoBrowser-ZLPhotoBrowser_Privacy */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "ZLPhotoBrowser-ZLPhotoBrowser_Privacy"; path = ZLPhotoBrowser_Privacy.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D2A9EB70C6642F12F68C802DBB83654 /* ZLPhotoBrowser_Privacy.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZLPhotoBrowser_Privacy.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EDD7427FA47E6BB56DA281D714A86EC /* MBProgressHUD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.debug.xcconfig; sourceTree = "<group>"; };
 		2EF03993A43ADBCF288A2C627B4C5F21 /* GKMessageTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GKMessageTool.m; path = GKMessageTool/GKMessageTool.m; sourceTree = "<group>"; };
 		2F1F89DC4E6ED9D8F89AE74CDC22C0CF /* ZLEditImageViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZLEditImageViewController.swift; path = Sources/Edit/ZLEditImageViewController.swift; sourceTree = "<group>"; };
 		2F9E5C66A9BAFFBCBDA272011B7D091C /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkReachabilityManager.m; path = AFNetworking/AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
-		3055F61D2E47D1AD1F4B70584EAA6A3C /* GKLivePhotoManager.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = GKLivePhotoManager.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		3055F61D2E47D1AD1F4B70584EAA6A3C /* GKLivePhotoManager.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = GKLivePhotoManager.podspec; sourceTree = "<group>"; tabWidth = 2; };
 		313F154171ABFE65283BAE0543811CFC /* ZLPhotoBrowser-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZLPhotoBrowser-umbrella.h"; sourceTree = "<group>"; };
 		31C1D37707DFAA5E6A164BCC07834264 /* Pods-Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example-Info.plist"; sourceTree = "<group>"; };
 		323251FFF9A01428DD9D30DFCC1A2D22 /* MBProgressHUD-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MBProgressHUD-Info.plist"; sourceTree = "<group>"; };
@@ -270,7 +270,7 @@
 		465BFBA32A1D4EBE297F682BD8C19C88 /* UIFont+ZLPhotoBrowser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIFont+ZLPhotoBrowser.swift"; path = "Sources/Extensions/UIFont+ZLPhotoBrowser.swift"; sourceTree = "<group>"; };
 		46C825DF506B70B51510D97948847A58 /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		46D81618FCAE12FC21573ED51CD5609A /* GKMessageTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GKMessageTool.release.xcconfig; sourceTree = "<group>"; };
-		47D53B413AEB4824F7A59421C36CA7B0 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = Sources/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		47D53B413AEB4824F7A59421C36CA7B0 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = Sources/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		47DA18D213BD09681D7EA380AD151F8B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		481A9046E2BF36A495DA8EDBB7CE1B54 /* GKLivePhotoManager.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GKLivePhotoManager.bundle; path = GKLivePhotoManager/Resources/GKLivePhotoManager.bundle; sourceTree = "<group>"; };
 		48E4D1F0C9C3AEF79FEFA9CA2828AFC7 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLRequestSerialization.m; path = AFNetworking/AFURLRequestSerialization.m; sourceTree = "<group>"; };
@@ -282,7 +282,7 @@
 		4C745D97B8B51B216FEEB1B21198143A /* GKLivePhotoManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GKLivePhotoManager.m; path = GKLivePhotoManager/GKLivePhotoManager.m; sourceTree = "<group>"; };
 		55125CAC0E4A63F93FDF648884B33DB9 /* GKMessageTool-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GKMessageTool-umbrella.h"; sourceTree = "<group>"; };
 		5620F96FA2792C3D7595C85AF5979A74 /* AFURLSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLSessionManager.h; path = AFNetworking/AFURLSessionManager.h; sourceTree = "<group>"; };
-		57B78EF727D2CDB009793AE9BAC6CDCB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		57B78EF727D2CDB009793AE9BAC6CDCB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		58DA2CA956DCBEB50AE9C8BC93D9A913 /* Array+ZLPhotoBrowser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+ZLPhotoBrowser.swift"; path = "Sources/Extensions/Array+ZLPhotoBrowser.swift"; sourceTree = "<group>"; };
 		5A80CB400A3A8ED74C3534258A8BAD88 /* Bundle+ZLPhotoBrowser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bundle+ZLPhotoBrowser.swift"; path = "Sources/Extensions/Bundle+ZLPhotoBrowser.swift"; sourceTree = "<group>"; };
 		5E44BB41121D3FEA66DAB660B66481CD /* UIProgressView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIProgressView+AFNetworking.h"; path = "UIKit+AFNetworking/UIProgressView+AFNetworking.h"; sourceTree = "<group>"; };
@@ -302,7 +302,7 @@
 		7300D855A1BFE293D95C2610BF84552E /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/PhotosUI.framework; sourceTree = DEVELOPER_DIR; };
 		757BF627841E5CFFEDCD5BF3DD78FB80 /* ZLPhotoBrowser-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ZLPhotoBrowser-Info.plist"; sourceTree = "<group>"; };
 		7825A90E082A1582EB16256B0E722B3F /* Pods-Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Example-umbrella.h"; sourceTree = "<group>"; };
-		78FBC98F5A7C90D4105196A8C676A521 /* GKLivePhotoManager-GKLivePhotoManager.Privacy */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "GKLivePhotoManager-GKLivePhotoManager.Privacy"; path = GKLivePhotoManager.Privacy.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		78FBC98F5A7C90D4105196A8C676A521 /* GKLivePhotoManager.Privacy.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GKLivePhotoManager.Privacy.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		79478091AF4F0D213F5C75942B3CA1D6 /* AFNetworking.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AFNetworking.modulemap; sourceTree = "<group>"; };
 		7ADE72F4F4B7E3F256F4008B419DBE19 /* AFNetworking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFNetworking.debug.xcconfig; sourceTree = "<group>"; };
 		7AF6518FE0E2E6673CE2EC1CBB3884A3 /* ZLPhotoBrowser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZLPhotoBrowser.debug.xcconfig; sourceTree = "<group>"; };
@@ -318,7 +318,7 @@
 		89A0E19476198F5D536C92095046D32B /* UIButton+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+AFNetworking.m"; path = "UIKit+AFNetworking/UIButton+AFNetworking.m"; sourceTree = "<group>"; };
 		8B7645C7AE39E0685EE6D4152F69CDD0 /* ZLClipImageViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZLClipImageViewController.swift; path = Sources/Edit/ZLClipImageViewController.swift; sourceTree = "<group>"; };
 		8B79601B546DE5D053A1C2E0BD0D0CAD /* GKMessageTool-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GKMessageTool-prefix.pch"; sourceTree = "<group>"; };
-		8B8FAB0D627B17EDE1366984278705D9 /* MBProgressHUD */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MBProgressHUD; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B8FAB0D627B17EDE1366984278705D9 /* MBProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CB0D73E05544FB407278300E221C0DC /* GKMessageTool-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GKMessageTool-Info.plist"; sourceTree = "<group>"; };
 		8CD08017340DF7B29A21FCB84DCD1E1D /* UIImage+ZLPhotoBrowser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+ZLPhotoBrowser.swift"; path = "Sources/Extensions/UIImage+ZLPhotoBrowser.swift"; sourceTree = "<group>"; };
 		90B79F29B273B4539A0CFA7E7B4772D5 /* AFCompatibilityMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFCompatibilityMacros.h; path = AFNetworking/AFCompatibilityMacros.h; sourceTree = "<group>"; };
@@ -331,21 +331,21 @@
 		97B265CB318E11920536A788C7E7EDA3 /* GKMessageTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GKMessageTool.h; path = GKMessageTool/GKMessageTool.h; sourceTree = "<group>"; };
 		9C7362A23EE06AD74FA153B42B9BAE20 /* GKLivePhotoManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GKLivePhotoManager-umbrella.h"; sourceTree = "<group>"; };
 		9CF8B0EC95AB67F43777D267F99F31C7 /* ZLProgressHUD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZLProgressHUD.swift; path = Sources/General/ZLProgressHUD.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E3CD16A1D502BCB2BFD696FE1F05116 /* ZLEmbedAlbumListView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZLEmbedAlbumListView.swift; path = Sources/General/ZLEmbedAlbumListView.swift; sourceTree = "<group>"; };
 		9EEC584716E11EE5E333BEE55841E3FE /* ZLClipOverlayView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZLClipOverlayView.swift; path = Sources/Edit/ZLClipOverlayView.swift; sourceTree = "<group>"; };
 		A1D5741B6B7C6D3B9C256BE30FFFB1BC /* ZLPhotoPreviewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZLPhotoPreviewController.swift; path = Sources/General/ZLPhotoPreviewController.swift; sourceTree = "<group>"; };
 		A29A8E478EC6437A7F42F390CE5F9885 /* PHPhotoLibrary+ZLPhotoBrowser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PHPhotoLibrary+ZLPhotoBrowser.swift"; path = "Sources/Extensions/PHPhotoLibrary+ZLPhotoBrowser.swift"; sourceTree = "<group>"; };
 		A2C89FCDE400136099B483CD7E725932 /* GKMessageTool.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GKMessageTool.modulemap; sourceTree = "<group>"; };
 		A32C250F145CC3DC1C92966EDB679DB4 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+AFNetworking.h"; path = "UIKit+AFNetworking/UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
-		A4FA15D44DF6BAC7550EDEED10862AA3 /* AFNetworking */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AFNetworking; path = AFNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4FA15D44DF6BAC7550EDEED10862AA3 /* AFNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AFNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A601D4F3869334147F46668C9D9EAE4F /* AFNetworking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFNetworking.release.xcconfig; sourceTree = "<group>"; };
 		A6465F4771CA895A57BF07FE097E0EF4 /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
 		A6BA28881ED934B62353150511A5617E /* ZLEditVideoViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZLEditVideoViewController.swift; path = Sources/Edit/ZLEditVideoViewController.swift; sourceTree = "<group>"; };
 		A6F28A4BDD372E40C64DCAE915919F8A /* ZLEditImageConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZLEditImageConfiguration.swift; path = Sources/General/ZLEditImageConfiguration.swift; sourceTree = "<group>"; };
 		A7C8FE8192E25F493656C3DFA1757010 /* ZLEditorManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZLEditorManager.swift; path = Sources/Edit/ZLEditorManager.swift; sourceTree = "<group>"; };
 		A86350BFC996A3ABF81231A61B531C43 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		A9C796CDA692CC97B0ADB77DAC8E03DB /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = GKLivePhotoManager/Resources/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		A9C796CDA692CC97B0ADB77DAC8E03DB /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = GKLivePhotoManager/Resources/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		AE0FA5623130359805D1CD44FBA6CD23 /* ZLPhotoModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZLPhotoModel.swift; path = Sources/General/ZLPhotoModel.swift; sourceTree = "<group>"; };
 		AF610AD8ABB357B2E471B759B2F4AFBA /* GKLivePhotoManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GKLivePhotoManager.modulemap; sourceTree = "<group>"; };
 		AFECBC24E09D0D25F822C27BD944AFD4 /* Pods-Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-frameworks.sh"; sourceTree = "<group>"; };
@@ -355,11 +355,11 @@
 		B47B1B323067D2163816BDE0C4DD2F8D /* ZLInputTextViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZLInputTextViewController.swift; path = Sources/Edit/ZLInputTextViewController.swift; sourceTree = "<group>"; };
 		B5BAB938B88FBD8905E50D3D329B2D6E /* ZLFetchImageOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZLFetchImageOperation.swift; path = Sources/General/ZLFetchImageOperation.swift; sourceTree = "<group>"; };
 		B680DB0A329CD22B5306EF6D83F9AF82 /* AFNetworking-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFNetworking-umbrella.h"; sourceTree = "<group>"; };
-		B7689E2609150AA80532D14E6F8AA13A /* GKMessageTool */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GKMessageTool; path = GKMessageTool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7689E2609150AA80532D14E6F8AA13A /* GKMessageTool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GKMessageTool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7AEC14C32C4354D60AD5F3866F43B12 /* ZLPhotoUIConfiguration+Chaining.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ZLPhotoUIConfiguration+Chaining.swift"; path = "Sources/General/ZLPhotoUIConfiguration+Chaining.swift"; sourceTree = "<group>"; };
 		B807FC1E102470BF705A8296CDFA213E /* AVCaptureDevice+ZLPhotoBrowser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AVCaptureDevice+ZLPhotoBrowser.swift"; path = "Sources/Extensions/AVCaptureDevice+ZLPhotoBrowser.swift"; sourceTree = "<group>"; };
 		B933165151443F1FD9CAFDFD700E3C96 /* ZLAnimationUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZLAnimationUtils.swift; path = Sources/General/ZLAnimationUtils.swift; sourceTree = "<group>"; };
-		BB28130B0F4C47DC99D2DB9C80F70152 /* ZLPhotoBrowser */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ZLPhotoBrowser; path = ZLPhotoBrowser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB28130B0F4C47DC99D2DB9C80F70152 /* ZLPhotoBrowser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZLPhotoBrowser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB304CE3419F0EE3329F2B9D4FF506B1 /* ZLPhotoBrowser.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = ZLPhotoBrowser.bundle; path = Sources/ZLPhotoBrowser.bundle; sourceTree = "<group>"; };
 		C0D662C085A2034C738A1FD68BC81A56 /* GKLivePhotoManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GKLivePhotoManager.release.xcconfig; sourceTree = "<group>"; };
 		C38020A6653211AA5508EC9B7BC9A9D1 /* AFAutoPurgingImageCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFAutoPurgingImageCache.m; path = "UIKit+AFNetworking/AFAutoPurgingImageCache.m"; sourceTree = "<group>"; };
@@ -395,7 +395,7 @@
 		ECE2ED55A74F442253A39584B84E63F8 /* AFURLSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLSessionManager.m; path = AFNetworking/AFURLSessionManager.m; sourceTree = "<group>"; };
 		F163925767E9596BFDBDC627DD083B75 /* ZLPhotoConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZLPhotoConfiguration.swift; path = Sources/General/ZLPhotoConfiguration.swift; sourceTree = "<group>"; };
 		F2BCF0E7501DBFADCAD8DCBBC9AE3295 /* AFImageDownloader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFImageDownloader.h; path = "UIKit+AFNetworking/AFImageDownloader.h"; sourceTree = "<group>"; };
-		F77B4D1C969BE43742722615372A5F5F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		F77B4D1C969BE43742722615372A5F5F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FF7D70B4381556F353D26DA68E7882EF /* ZLPhotoBrowser-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZLPhotoBrowser-prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -482,7 +482,6 @@
 				12A9B3FBD372A3941D89166B231955FF /* Resources */,
 				3F744C68192452367CBB6E22CB8A9A17 /* Support Files */,
 			);
-			name = GKMessageTool;
 			path = GKMessageTool;
 			sourceTree = "<group>";
 		};
@@ -623,7 +622,6 @@
 				D078BCEB47148206E1FE9E7E1E927B9D /* Resources */,
 				3B10CC5DB8FCC64CDBC0CCF70E6CAC63 /* Support Files */,
 			);
-			name = ZLPhotoBrowser;
 			path = ZLPhotoBrowser;
 			sourceTree = "<group>";
 		};
@@ -680,7 +678,6 @@
 				79611148677BE7292A700EE217758E73 /* Support Files */,
 				B5201830F24CC2AD471A90C994EE0D83 /* UIKit */,
 			);
-			name = AFNetworking;
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
@@ -749,7 +746,6 @@
 				1D5D7AFBDDC1A3B4DB5DACE7F8C0A4ED /* MBProgressHUD.m */,
 				D94E92FF2399E453D57A06D832009E36 /* Support Files */,
 			);
-			name = MBProgressHUD;
 			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
@@ -870,14 +866,14 @@
 		F9A781A9044BDC4FD1F52981B0BEC819 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A4FA15D44DF6BAC7550EDEED10862AA3 /* AFNetworking */,
-				2073CF864469BCC16DDAB6E0E5C3DFE4 /* GKLivePhotoManager */,
-				78FBC98F5A7C90D4105196A8C676A521 /* GKLivePhotoManager-GKLivePhotoManager.Privacy */,
-				B7689E2609150AA80532D14E6F8AA13A /* GKMessageTool */,
-				8B8FAB0D627B17EDE1366984278705D9 /* MBProgressHUD */,
-				1F667CC0E19EAF34E5A4119E2121F585 /* Pods-Example */,
-				BB28130B0F4C47DC99D2DB9C80F70152 /* ZLPhotoBrowser */,
-				2D2A9EB70C6642F12F68C802DBB83654 /* ZLPhotoBrowser-ZLPhotoBrowser_Privacy */,
+				A4FA15D44DF6BAC7550EDEED10862AA3 /* AFNetworking.framework */,
+				2073CF864469BCC16DDAB6E0E5C3DFE4 /* GKLivePhotoManager.framework */,
+				78FBC98F5A7C90D4105196A8C676A521 /* GKLivePhotoManager.Privacy.bundle */,
+				B7689E2609150AA80532D14E6F8AA13A /* GKMessageTool.framework */,
+				8B8FAB0D627B17EDE1366984278705D9 /* MBProgressHUD.framework */,
+				1F667CC0E19EAF34E5A4119E2121F585 /* Pods_Example.framework */,
+				BB28130B0F4C47DC99D2DB9C80F70152 /* ZLPhotoBrowser.framework */,
+				2D2A9EB70C6642F12F68C802DBB83654 /* ZLPhotoBrowser_Privacy.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -974,7 +970,7 @@
 			);
 			name = AFNetworking;
 			productName = AFNetworking;
-			productReference = A4FA15D44DF6BAC7550EDEED10862AA3 /* AFNetworking */;
+			productReference = A4FA15D44DF6BAC7550EDEED10862AA3 /* AFNetworking.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		031F962D04B5D46979C150C8762A08E0 /* GKLivePhotoManager-GKLivePhotoManager.Privacy */ = {
@@ -991,7 +987,7 @@
 			);
 			name = "GKLivePhotoManager-GKLivePhotoManager.Privacy";
 			productName = GKLivePhotoManager.Privacy;
-			productReference = 78FBC98F5A7C90D4105196A8C676A521 /* GKLivePhotoManager-GKLivePhotoManager.Privacy */;
+			productReference = 78FBC98F5A7C90D4105196A8C676A521 /* GKLivePhotoManager.Privacy.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		0AEE99A309977BD12A049FF48AF9BA4B /* Pods-Example */ = {
@@ -1014,7 +1010,7 @@
 			);
 			name = "Pods-Example";
 			productName = Pods_Example;
-			productReference = 1F667CC0E19EAF34E5A4119E2121F585 /* Pods-Example */;
+			productReference = 1F667CC0E19EAF34E5A4119E2121F585 /* Pods_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		1DB1C15110762C9CD1AA1BDF1774FFE3 /* GKLivePhotoManager */ = {
@@ -1033,7 +1029,7 @@
 			);
 			name = GKLivePhotoManager;
 			productName = GKLivePhotoManager;
-			productReference = 2073CF864469BCC16DDAB6E0E5C3DFE4 /* GKLivePhotoManager */;
+			productReference = 2073CF864469BCC16DDAB6E0E5C3DFE4 /* GKLivePhotoManager.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		2FAF03761A44702490259F857A848B42 /* ZLPhotoBrowser */ = {
@@ -1052,7 +1048,7 @@
 			);
 			name = ZLPhotoBrowser;
 			productName = ZLPhotoBrowser;
-			productReference = BB28130B0F4C47DC99D2DB9C80F70152 /* ZLPhotoBrowser */;
+			productReference = BB28130B0F4C47DC99D2DB9C80F70152 /* ZLPhotoBrowser.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		82B0A41D3031FF27D78E17B0A9A46FB0 /* MBProgressHUD */ = {
@@ -1070,7 +1066,7 @@
 			);
 			name = MBProgressHUD;
 			productName = MBProgressHUD;
-			productReference = 8B8FAB0D627B17EDE1366984278705D9 /* MBProgressHUD */;
+			productReference = 8B8FAB0D627B17EDE1366984278705D9 /* MBProgressHUD.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		8ACAF5EC811E4C23868E38542031FCF4 /* GKMessageTool */ = {
@@ -1089,7 +1085,7 @@
 			);
 			name = GKMessageTool;
 			productName = GKMessageTool;
-			productReference = B7689E2609150AA80532D14E6F8AA13A /* GKMessageTool */;
+			productReference = B7689E2609150AA80532D14E6F8AA13A /* GKMessageTool.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		9066640DC2781DD72803E86F53E40AAE /* ZLPhotoBrowser-ZLPhotoBrowser_Privacy */ = {
@@ -1106,7 +1102,7 @@
 			);
 			name = "ZLPhotoBrowser-ZLPhotoBrowser_Privacy";
 			productName = ZLPhotoBrowser_Privacy;
-			productReference = 2D2A9EB70C6642F12F68C802DBB83654 /* ZLPhotoBrowser-ZLPhotoBrowser_Privacy */;
+			productReference = 2D2A9EB70C6642F12F68C802DBB83654 /* ZLPhotoBrowser_Privacy.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -1127,8 +1123,6 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			minimizedProjectReferenceProxies = 0;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = F9A781A9044BDC4FD1F52981B0BEC819 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1196,7 +1190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A71248A3EEEF2B5C6042E8BBC95F93E /* GKLivePhotoManager.bundle in Resources */,
-				D2DD6A83E1BCE0BD5EA5CFE036988627 /* GKLivePhotoManager-GKLivePhotoManager.Privacy in Resources */,
+				D2DD6A83E1BCE0BD5EA5CFE036988627 /* GKLivePhotoManager.Privacy.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1205,7 +1199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E5D9EAEAC9608DEDF8E368A357D41DD /* ZLPhotoBrowser.bundle in Resources */,
-				28B0632A044A5D3D4A936B15535788DF /* ZLPhotoBrowser-ZLPhotoBrowser_Privacy in Resources */,
+				28B0632A044A5D3D4A936B15535788DF /* ZLPhotoBrowser_Privacy.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
