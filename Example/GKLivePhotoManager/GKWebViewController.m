@@ -12,8 +12,8 @@
 
 @interface GKWebViewController ()
 
-@property (nonatomic, copy) NSString *videoPath;
-@property (nonatomic, copy) NSString *imagePath;
+@property (nonatomic, copy) NSString *outVideoPath;
+@property (nonatomic, copy) NSString *outImagePath;
 
 @end
 
@@ -26,8 +26,11 @@
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
-    NSURL *videoUrl = [NSURL URLWithString:@"https://video.weibo.com/media/play?livephoto=https%3A%2F%2Fus.sinaimg.cn%2F000YYEgOgx08fAjKa77G0f0f0100fQhZ0k01.mov"];
-    NSURL *imageUrl = [NSURL URLWithString:@"https://wx1.sinaimg.cn/mw690/87b3c920gy1hqm73s9siyj22c0340u0x.jpg"];
+    NSURL *videoUrl = [NSURL URLWithString:self.videoPath];
+    NSURL *imageUrl = nil;
+    if (self.imagePath.length) {
+        imageUrl = [NSURL URLWithString:self.imagePath];
+    }
     
     NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
     
@@ -42,34 +45,61 @@
     }
     
     [GKMessageTool showMessage:@"资源下载中..."];
-    [[manager downloadTaskWithRequest:[NSURLRequest requestWithURL:videoUrl] progress:nil destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
-        return [NSURL fileURLWithPath:videoPath];
-    } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
-        self.videoPath = filePath.path;
-        if (self.videoPath && self.imagePath) {
-            [self reqeustLivePhoto];
-        }
-    }] resume];
+    if (videoUrl && imageUrl) {
+        [[manager downloadTaskWithRequest:[NSURLRequest requestWithURL:videoUrl] progress:nil destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
+            return [NSURL fileURLWithPath:videoPath];
+        } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
+            self.outVideoPath = filePath.path;
+            if (self.outVideoPath && self.outImagePath) {
+                [self reqeustLivePhoto];
+            }
+        }] resume];
+        
+        [[manager downloadTaskWithRequest:[NSURLRequest requestWithURL:imageUrl] progress:nil destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
+            return [NSURL fileURLWithPath:imagePath];
+        } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
+            self.outImagePath = filePath.path;
+            if (self.outVideoPath && self.outImagePath) {
+                [self reqeustLivePhoto];
+            }
+        }] resume];
+    }else {
+        [[manager downloadTaskWithRequest:[NSURLRequest requestWithURL:videoUrl] progress:nil destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
+            return [NSURL fileURLWithPath:videoPath];
+        } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
+            self.outVideoPath = filePath.path;
+            if (self.outVideoPath) {
+                [self reqeustLivePhoto];
+            }
+        }] resume];
+    }
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
     
-    [[manager downloadTaskWithRequest:[NSURLRequest requestWithURL:imageUrl] progress:nil destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
-        return [NSURL fileURLWithPath:imagePath];
-    } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
-        self.imagePath = filePath.path;
-        if (self.videoPath && self.imagePath) {
-            [self reqeustLivePhoto];
-        }
-    }] resume];
+    NSFileManager *manager = [NSFileManager defaultManager];
+    
+    if ([manager fileExistsAtPath:self.outVideoPath]) {
+        [manager removeItemAtPath:self.outVideoPath error:nil];
+    }
+    
+    if ([manager fileExistsAtPath:self.outImagePath]) {
+        [manager removeItemAtPath:self.outImagePath error:nil];
+    }
 }
 
 - (void)reqeustLivePhoto {
     __weak __typeof(self) weakSelf = self;
     [GKMessageTool showMessage:@"处理livePhoto"];
     
-    [[GKLivePhotoManager manager] handleDataWithVideoPath:self.videoPath imagePath:self.imagePath progressBlock:^(float progress) {
-        NSLog(@"%f", progress);
+    [[GKLivePhotoManager manager] handleDataWithVideoPath:self.outVideoPath imagePath:self.outImagePath progressBlock:^(float progress) {
+        NSLog(@"处理进度---%f", progress);
     } completion:^(NSString * _Nullable outVideoPath, NSString * _Nullable outImagePath, NSError * _Nullable error) {
         if (error) {
-            [GKMessageTool showError:error.localizedDescription];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [GKMessageTool showError:error.localizedDescription];
+            });
         }else {
             [[GKLivePhotoManager manager] createLivePhotoWithVideoPath:outVideoPath imagePath:outImagePath targetSize:CGSizeMake(300, 300) completion:^(PHLivePhoto * _Nullable livePhoto, NSError * _Nullable error) {
                 [GKMessageTool hideMessage];

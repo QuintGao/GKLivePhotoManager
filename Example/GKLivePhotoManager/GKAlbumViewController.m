@@ -8,11 +8,12 @@
 #import "GKAlbumViewController.h"
 #import <Photos/Photos.h>
 #import <MobileCoreServices/MobileCoreServices.h>
-#import <TZImagePickerController/TZImagePickerController.h>
 #import "GKLivePhotoManager.h"
 #import "GKMessageTool/GKMessageTool.h"
+#import <Example-Swift.h>
+#import <ZLPhotoBrowser/ZLPhotoBrowser-Swift.h>
 
-@interface GKAlbumViewController ()<TZImagePickerControllerDelegate>
+@interface GKAlbumViewController ()
 
 @end
 
@@ -34,20 +35,33 @@
 }
 
 - (void)selectAction {
-    TZImagePickerController *pickerVC = [[TZImagePickerController alloc] initWithMaxImagesCount:1 delegate:self];
-    [self presentViewController:pickerVC animated:YES completion:nil];
+    BOOL isLive = [self.videoPath isEqualToString:@"1"];
+    
+    ZLPhotoConfiguration *config = [ZLPhotoConfiguration default];
+    config.maxSelectCount = 1;
+    
+    if (isLive) {
+        config.allowSelectImage = YES;
+        config.allowSelectVideo = NO;
+        config.allowSelectLivePhoto = YES;
+    }else {
+        config.allowSelectImage = NO;
+        config.allowSelectVideo = YES;
+    }
+    
+    ZLPhotoPreviewSheet *sheet = [[ZLPhotoPreviewSheet alloc] init];
+    
+    __weak __typeof(self) weakSelf = self;
+    sheet.selectImageBlock = ^(NSArray<ZLResultModel *> *result, BOOL isOriginal) {
+        __strong __typeof(weakSelf) self = weakSelf;
+        ZLResultModel *model = result.firstObject;
+        [self createLivePhotoWithAsset:model.asset];
+    };
+    
+    [sheet showPhotoLibraryWithSender:self];
 }
 
-#pragma mark - TZImagePickerControllerDelegate
-- (void)tz_imagePickerControllerDidCancel:(TZImagePickerController *)picker {
-    
-}
-
-- (void)imagePickerController:(TZImagePickerController *)picker didFinishPickingPhotos:(NSArray<UIImage *> *)photos sourceAssets:(NSArray *)assets isSelectOriginalPhoto:(BOOL)isSelectOriginalPhoto infos:(NSArray<NSDictionary *> *)infos {
-    
-    PHAsset *asset = assets.firstObject;
-    if (!asset) return;
-    
+- (void)createLivePhotoWithAsset:(PHAsset *)asset {
     __weak __typeof(self) weakSelf = self;
     [GKMessageTool showMessage:nil];
     [[GKLivePhotoManager manager] createLivePhotoWithAsset:asset targetSize:CGSizeMake(300, 300) progressBlock:^(float progress) {

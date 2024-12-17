@@ -8,5 +8,7 @@ Pod::Spec.new do |s|
   s.social_media_url   = "https://github.com/QuintGao"
   s.ios.deployment_target = "10.0"
   s.source       = { :git => "https://github.com/QuintGao/GKLivePhotoManager.git", :tag => s.version.to_s }
-  s.source_files = 'GKLivePhotoManager/**/*'
+  s.source_files = 'GKLivePhotoManager/**/*.{h,m}'
+  s.resources = 'GKLivePhotoManager/Resources/*.{bundle}'
+  s.resource_bundle = {'GKLivePhotoManager.Privacy' => ['GKLivePhotoManager/Resources/PrivacyInfo.xcprivacy']}
 end

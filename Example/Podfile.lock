@@ -14,28 +14,26 @@ PODS:
   - AFNetworking/Serialization (4.0.1)
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
-  - GKLivePhotoManager (1.0.1)
+  - GKLivePhotoManager (1.0.4)
   - GKMessageTool (1.0.5):
     - MBProgressHUD
   - MBProgressHUD (1.2.0)
-  - TZImagePickerController (3.8.6):
-    - TZImagePickerController/Basic (= 3.8.6)
-    - TZImagePickerController/Location (= 3.8.6)
-  - TZImagePickerController/Basic (3.8.6)
-  - TZImagePickerController/Location (3.8.6)
+  - ZLPhotoBrowser (4.5.7):
+    - ZLPhotoBrowser/Core (= 4.5.7)
+  - ZLPhotoBrowser/Core (4.5.7)
 
 DEPENDENCIES:
   - AFNetworking
   - GKLivePhotoManager (from `../`)
   - GKMessageTool
-  - TZImagePickerController
+  - ZLPhotoBrowser
 
 SPEC REPOS:
   trunk:
     - AFNetworking
     - GKMessageTool
     - MBProgressHUD
-    - TZImagePickerController
+    - ZLPhotoBrowser
 
 EXTERNAL SOURCES:
   GKLivePhotoManager:
@@ -43,11 +41,11 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
-  GKLivePhotoManager: 0f9ef6bedc9a80f03c3eaa4ce986b9c675ae9852
+  GKLivePhotoManager: 0089fa6c2c036f9ddbf6751be7bbcc84bf38ca2e
   GKMessageTool: fcf46cca30f62eaebb8fea288c9452f3682645f2
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
-  TZImagePickerController: a013c186415f6044914bb0d0dd960a884cff46ec
+  ZLPhotoBrowser: 04c8a5c5299a3b5945c60bd0e676c16d1215b14c
 
-PODFILE CHECKSUM: 49f47a75d54d807bad4480001736e39af7cc244c
+PODFILE CHECKSUM: cc2666a7a15eaca5ea16806919c2d3cea94fadcb
 
-COCOAPODS: 1.15.2
+COCOAPODS: 1.16.1

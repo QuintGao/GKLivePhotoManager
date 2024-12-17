@@ -22,6 +22,11 @@
 
 @property (nonatomic, strong) UIView *playView;
 
+@property (nonatomic, copy) NSString *saveVideoPath;
+
+@property (nonatomic, copy) NSString *outVideoPath;
+@property (nonatomic, copy) NSString *outImagePath;
+
 @end
 
 @implementation GKSaveViewController
@@ -29,25 +34,35 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSURL *url = [NSURL URLWithString:@"https://videos.pexels.com/video-files/24797498/11897306_360_640_60fps.mp4"];
-    self.url = url;
+    self.title = @"保存到相册";
     
-    AVPlayerItem *item = [AVPlayerItem playerItemWithURL:url];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
-    self.player = [AVPlayer playerWithPlayerItem:item];
+    NSURL *videoUrl = [NSURL URLWithString:self.videoPath];
     
-    self.playerLayer = [AVPlayerLayer playerLayerWithPlayer:self.player];
-    self.playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
+    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
     
-    self.playView = [[UIView alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, self.view.frame.size.width * 9 / 16)];
-    [self.view addSubview:self.playView];
+    NSString *videoPath = [path stringByAppendingPathComponent:@"web.mov"];
     
-    self.playerLayer.frame = self.playView.bounds;
-    [self.playView.layer addSublayer:self.playerLayer];
+    if ([[NSFileManager defaultManager] fileExistsAtPath:videoPath]) {
+        [[NSFileManager defaultManager] removeItemAtPath:videoPath error:nil];
+    }
     
-    [self.player play];
+    [GKMessageTool showMessage:@"资源下载中..."];
     
-    UIButton *saveBtn = [[UIButton alloc] initWithFrame:CGRectMake((self.view.bounds.size.width - 180)/2, CGRectGetMaxY(_playView.frame) + 20, 180, 30)];
+    [[manager downloadTaskWithRequest:[NSURLRequest requestWithURL:videoUrl] progress:nil destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
+        return [NSURL fileURLWithPath:videoPath];
+    } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
+        self.saveVideoPath = filePath.path;
+        if (self.saveVideoPath) {
+            [self reqeustLivePhoto];
+        }else {
+            [GKMessageTool hideMessage];
+            [GKMessageTool showError:error.localizedDescription];
+        }
+    }] resume];
+    
+    UIButton *saveBtn = [[UIButton alloc] initWithFrame:CGRectMake((self.view.bounds.size.width - 180)/2, CGRectGetMaxY(self.photoView.frame) + 80, 180, 30)];
     [saveBtn setTitle:@"生成livePhoto并保存" forState:UIControlStateNormal];
     [saveBtn setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
     saveBtn.backgroundColor = UIColor.blackColor;
@@ -57,53 +72,56 @@
     [saveBtn addTarget:self action:@selector(saveAction) forControlEvents:UIControlEventTouchUpInside];
 }
 
-- (void)saveAction {
-    // 下载视频并保存
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
     
-    NSString *documentPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
-    NSString *filePath = [documentPath stringByAppendingPathComponent:@"test-video.mp4"];
-    if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
-//        [GKMessageTool showMessage:nil];
-//        [self saveLivePhotoWithUrl:filePath];
-//        return;
-        [[NSFileManager defaultManager] removeItemAtPath:filePath error:nil];
+    if ([[NSFileManager defaultManager] fileExistsAtPath:self.saveVideoPath]) {
+        [[NSFileManager defaultManager] removeItemAtPath:self.saveVideoPath error:nil];
     }
-    
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    [GKMessageTool showMessage:nil];
-    [[manager downloadTaskWithRequest:[NSURLRequest requestWithURL:self.url] progress:^(NSProgress * _Nonnull downloadProgress) {
-        NSLog(@"%.0f%%", ((float)downloadProgress.completedUnitCount / (float)downloadProgress.totalUnitCount) * 100);
-    } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
-        return [NSURL fileURLWithPath:filePath];
-    } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
-        [self saveLivePhotoWithUrl:filePath.path];
-    }] resume];
 }
 
-- (void)saveLivePhotoWithUrl:(NSString *)url {
-//    [[GKLivePhotoManager manager] handleDataWithVideoPath:url progressBlock:^(float progress) {
-//        NSLog(@"%f", progress);
-//    } completion:^(NSString * _Nullable outVideoPath, NSString * _Nullable outImagePath, NSError * _Nullable error) {
-//        if (error) {
-//            [GKMessageTool showError:error.localizedDescription];
-//        }else {
-//            [[GKLivePhotoManager manager] saveLivePhotoWithVideoPath:outVideoPath imagePath:outImagePath completion:^(BOOL success, NSError *error) {
-//                [GKMessageTool hideMessage];
-//                if (error) {
-//                    [GKMessageTool showError:error.localizedDescription];
-//                }else {
-//                    [GKMessageTool showText:@"保存成功！！！"];
-//                }
-//            }];
-//        }
-//    }];
+- (void)reqeustLivePhoto {
     
-    [LivePhotoUtil convertVideo:url complete:^(BOOL success, NSString *msg) {
-        if (success) {
-            NSLog(@"保存成功！！！！");
+    [[GKLivePhotoManager manager] handleDataWithVideoPath:self.saveVideoPath progressBlock:^(float progress) {
+        
+    } completion:^(NSString * _Nullable outVideoPath, NSString * _Nullable outImagePath, NSError * _Nullable error) {
+        if (error) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [GKMessageTool showError:error.localizedDescription];
+            });
+        }else {
+            self.outVideoPath = outVideoPath;
+            self.outImagePath = outImagePath;
+            
+            [[GKLivePhotoManager manager] createLivePhotoWithVideoPath:outVideoPath imagePath:outImagePath targetSize:CGSizeMake(300, 300) completion:^(PHLivePhoto * _Nullable livePhoto, NSError * _Nullable error) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    if (error) {
+                        [GKMessageTool showError:error.localizedDescription];
+                    }else {
+                        [GKMessageTool hideMessage];
+                        [self setLivePhoto:livePhoto];
+                    }
+                });
+            }];
         }
     }];
+}
+
+- (void)saveAction {
+    if (!self.outVideoPath || !self.outImagePath) {
+        [GKMessageTool showError:@"资源准备中，请稍后"];
+        return;
+    }
     
+    // 保存到相册
+    [GKMessageTool showMessage:nil];
+    [[GKLivePhotoManager manager] saveLivePhotoWithVideoPath:self.outVideoPath imagePath:self.outImagePath completion:^(BOOL success, NSError *error) {
+        if (error) {
+            [GKMessageTool showError:error.localizedDescription];
+        }else {
+            [GKMessageTool showText:@"保存成功！！！"];
+        }
+    }];
 }
 
 @end
